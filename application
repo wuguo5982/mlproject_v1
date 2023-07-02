@@ -1,4 +1,4 @@
-from flask import Flask,request,render_template
+from flask import Flask,request,render_template,jsonify
 from flask_cors import CORS, cross_origin
 
 import numpy as np
@@ -17,7 +17,7 @@ app=application
 @app.route('/')
 @cross_origin()
 def index():
-    return render_template('index.html') 
+    return render_template('home.html') 
 
 @app.route('/predictdata',methods=['GET','POST'])
 @cross_origin()
@@ -41,12 +41,10 @@ def predict_datapoint():
         results=predict_pipeline.predict(pred_df)
         return render_template('home.html',results=results[0])
     
-
-
-@app.route('/')
-@cross_origin()
-def index():
-    return render_template('index.html') 
+# @app.route('/')
+# @cross_origin()
+# def index():
+#     return render_template('index.html') 
 
 @app.route('/predictdata',methods=['POST'])
 @cross_origin()
@@ -68,7 +66,8 @@ def predict_datapoint():
 
         predict_pipeline=PredictPipeline()
         results=predict_pipeline.predict(pred_df)
-        return render_template(results=results[0])
+        res={'result':round(results[0],2)}
+        return jsonify(res)
 
 
 if __name__=="__main__":
