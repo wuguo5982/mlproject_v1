@@ -62,12 +62,11 @@ def predict_datapoint():
             writing_score=float(request.form.get('reading_score')))
         
         pred_df=data.get_data_as_data_frame()
-        print(pred_df)
+        # print(pred_df)
 
         predict_pipeline=PredictPipeline()
         results=predict_pipeline.predict(pred_df)
-        res={'result':round(results[0],2)}
-        return jsonify(res)
+        return render_template(results=results[0])
 
 
 if __name__=="__main__":
