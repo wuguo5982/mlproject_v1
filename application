@@ -46,9 +46,9 @@ def predict_datapoint():
 # def index():
 #     return render_template('index.html') 
 
-@app.route('/predictdata',methods=['POST'])
+@app.route('/predictAPI',methods=['POST'])
 @cross_origin()
-def predict_datapoint():
+def predict_api():
     if request.method=='POST':
     #     return render_template('home.html')
     # else:
