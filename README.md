@@ -10,3 +10,5 @@ docker build -t testdockeraz.azurecr.io/mltest:latest .
 docker login testdockeraz.azurecr.io
 
 docker push testdockeraz.azurecr.io/mltest:latest
+
+
