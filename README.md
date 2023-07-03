@@ -1,11 +1,4 @@
-## End to End MAchine Learning Project
+### End to End Machine Learning Project (for practice purpose only)
+### Azure
 
-
-
-## Run from terminal:
-
-docker build -t testdockerkrish.azurecr.io/mltest:latest .
-
-docker login testdockerkrish.azurecr.io
-
-docker push testdockerkrish.azurecr.io/mltest:latest
+### Please also refer to https://www.youtube.com/playlist?list=PLZoTAELRMXVPS-dOaVbAux22vzqdgoGhG
