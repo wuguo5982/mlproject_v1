@@ -4,8 +4,8 @@
 
 ## Run from terminal:
 
-docker build -t testdockerkrish.azurecr.io/mltest:latest .
+docker build -t testdockeraz.azurecr.io/mltest:latest .
 
-docker login testdockerkrish.azurecr.io
+docker login testdockeraz.azurecr.io
 
-docker push testdockerkrish.azurecr.io/mltest:latest
+docker push testdockeraz.azurecr.io/mltest:latest
