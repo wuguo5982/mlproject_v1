@@ -1,5 +1,5 @@
 ### End to End Machine Learning Project (for practice purpose only)
-### Azure deployment 
+## Azure deployment 
 1. Container registry.
 2. Docker set up in local and push to container registry.
 3. Azure Web app with container.
